@@ -1,83 +1,93 @@
-WordleES-API
-🧩 Descripción
+Claro, aquí tienes una versión adaptada del `README.md` para tu proyecto **WordleES-API**, considerando las funcionalidades que planeas implementar:
+
+---
+
+# WordleES-API
+
+## 🧩 Descripción
+
 API para el proyecto WordleES en español.
 Incluye funcionalidades extendidas como gestión de usuarios, autenticación, historial de partidas, estadísticas, personalización y más.
 
-🌐 Demo
-En desarrollo — próximamente disponible en producción (Vercel / Render / Railway / etc.).
+---
 
-📌 Funcionalidades principales
-🟢 Juego
-GET /api/wordle/
-Devuelve la palabra diaria:
-→ { dailyWord: "cañón" }
+## 🌐 Demo
 
-GET /api/wordle/checkword/:word
-Verifica si la palabra es igual a la palabra diaria:
-→ { status: "correct" } o { status: "incorrect" }
+> *En desarrollo — próximamente disponible en producción (Vercel / Render / Railway / etc.).*
 
-POST /api/wordle/updateword
-Selecciona una nueva palabra diaria aleatoria.
+---
 
-POST /api/wordle/setword/:word
-Fija manualmente la palabra diaria.
+## 📌 Funcionalidades principales
 
-GET /api/wordle/random
-Devuelve una palabra aleatoria (no diaria):
-→ { word: "campo" }
+### 🟢 Juego
 
-🔐 Autenticación
-POST /api/auth/register
-Registra un nuevo usuario con username, email y password.
+* `GET /api/wordle/`
+  Devuelve la palabra diaria:
+  → `{ dailyWord: "cañón" }`
 
-POST /api/auth/login
-Inicia sesión y devuelve un token JWT.
+* `GET /api/wordle/checkword/:word`
+  Verifica si la palabra es igual a la palabra diaria:
+  → `{ status: "correct" }` o `{ status: "incorrect" }`
 
-GET /api/auth/me
-Devuelve los datos del usuario autenticado (requiere header Authorization: Bearer <token>).
+* `POST /api/wordle/updateword`
+  Selecciona una nueva palabra diaria aleatoria.
 
-🎮 Partidas y estadísticas (próximamente)
-Guardado automático de partidas (modo diario o libre).
+* `POST /api/wordle/setword/:word`
+  Fija manualmente la palabra diaria.
 
-Acceso al historial de partidas jugadas.
+* `GET /api/wordle/random`
+  Devuelve una palabra aleatoria (no diaria):
+  → `{ word: "campo" }`
 
-Estadísticas personales (racha, porcentaje de victoria, distribución de intentos).
+---
 
-Configuración de perfil (idioma, tema, dificultad).
+### 🔐 Autenticación
 
-Rankings globales y entre amigos.
+* `POST /api/auth/register`
+  Registra un nuevo usuario con `username`, `email` y `password`.
 
-Posibilidad de compartir resultados.
+* `POST /api/auth/login`
+  Inicia sesión y devuelve un token JWT.
 
-✅ TO-DO
- Guardar y consultar historial de partidas por usuario.
+* `GET /api/auth/me`
+  Devuelve los datos del usuario autenticado (requiere header `Authorization: Bearer <token>`).
 
- Personalización de interfaz (modo oscuro, color de teclado).
+---
 
- Compartir resultados (copiar resumen al portapapeles, enlace de compartir).
+### 🎮 Partidas y estadísticas (próximamente)
 
- Ranking de mejores jugadores.
+* Guardado automático de partidas (modo diario o libre).
+* Acceso al historial de partidas jugadas.
+* Estadísticas personales (racha, porcentaje de victoria, distribución de intentos).
+* Configuración de perfil (idioma, tema, dificultad).
+* Rankings globales y entre amigos.
+* Posibilidad de compartir resultados.
 
- Agregar/amigos (seguir y comparar estadísticas).
+---
 
- Autenticación con JWT y MongoDB.
+## ✅ TO-DO
 
- Registro e inicio de sesión.
+* [ ] Guardar y consultar historial de partidas por usuario.
+* [ ] Personalización de interfaz (modo oscuro, color de teclado).
+* [ ] Compartir resultados (copiar resumen al portapapeles, enlace de compartir).
+* [ ] Ranking de mejores jugadores.
+* [ ] Agregar/amigos (seguir y comparar estadísticas).
+* [x] Autenticación con JWT y MongoDB.
+* [x] Registro e inicio de sesión.
+* [ ] Crear endpoints REST para estadísticas y rankings.
+* [ ] Evitar repetir palabras diarias recientes.
+* [ ] Cifrar palabra diaria para evitar filtraciones.
 
- Crear endpoints REST para estadísticas y rankings.
+---
 
- Evitar repetir palabras diarias recientes.
+## 🛠️ Tecnologías
 
- Cifrar palabra diaria para evitar filtraciones.
+* Node.js + Express
+* MongoDB + Mongoose
+* JSON Web Tokens (JWT)
+* Bcrypt.js (hashing de contraseñas)
+* Cors, dotenv, nodemon
 
-🛠️ Tecnologías
-Node.js + Express
+---
 
-MongoDB + Mongoose
-
-JSON Web Tokens (JWT)
-
-Bcrypt.js (hashing de contraseñas)
-
-Cors, dotenv, nodemon
-
+¿Te gustaría que también generemos un README para el frontend o una guía de instalación paso a paso?
