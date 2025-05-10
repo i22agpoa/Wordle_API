@@ -5,7 +5,7 @@ Overview
 ----------
 
 Api used for my WordleES project, only spanish words!
-Every day it returns a new word
+Every day it returns a new word.
 
 Demo
 ----------
